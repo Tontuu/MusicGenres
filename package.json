@@ -1,6 +1,7 @@
 {
   "name": "musicgenres",
   "version": "0.1.0",
+  "bin": "server/server.js",
   "private": true,
   "scripts": {
     "build": "spicetify-creator",
@@ -14,8 +15,17 @@
     "spicetify-creator": "^1.0.17"
   },
   "dependencies": {
+    "axios": "^1.13.6",
+    "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "node-fetch": "^3.3.2"
+  },
+  "pkg": {
+    "targets": [
+      "node18-win-x64"
+    ],
+    "scripts": "server/*.js",
+    "outputPath": "dist"
   }
 }
